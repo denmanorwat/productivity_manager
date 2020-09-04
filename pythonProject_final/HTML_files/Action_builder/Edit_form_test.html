@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="edit" method="POST" accept-charset="UTF-8">
+  <label for="name">Name:</label>
+  <br>
+  <input type="text" id="name" name="name" placeholder="Action" value="Name_of_an_action" required>
+  <br>
+  <label for="description">Description:</label>
+  <br>
+  <input type="text" id="description" name="description" placeholder="Description" value="Description_of_an_action" required>
+  <br>
+  <font> Start date and time:</font>
+  <br>
+  <input type="date" id="start_date" name="date" value="2000-12-22" required><font>   </font>
+  <input type="time" id="start_time" name="time" value="17:40" required>
+  <br>
+  <font> End date and time:</font>
+  <br>
+  <input type="date" id="end_date" name="date" value="2001-12-22" required><font>  </font>
+  <input type="time" id="end_time" name="time" value="17:40" required>
+  <br>
+  <br>
+    <font> List of subactions: </font>
+    <ol>
+    <li>
+      <input type="hidden" name="id" value="1" >
+      <input type="text" name="description" value="subaction's_description">
+      <br>
+      <font> Start date and time:</font>
+      <br>
+      <input type="date" name="date" value="2000-12-22" required><font>   </font>
+      <input type="time" name="time" value="17:40" required>
+      <br>
+      <font> End date and time:</font>
+      <br>
+      <input type="date" name="date" value="2001-12-22" required><font>  </font>
+      <input type="time" name="time" value="17:40" required>
+      <br>
+    </li>
+    </ol>
+  <input type="submit" id="edit" value="Edit" name="action">
+  <input type="submit" id="cancel" value="Cancel" name="action" formnovalidate>
+</form>
+</body>

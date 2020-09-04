@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="empty">  </form>
+<h1> Your current actions: </h1>
+<button form="empty" type="submit" formmethod="post" formaction="/add_request"> Add action </button>
+<button form="empty" type="submit" formmethod="post" formaction="/log_out"> Log out </button>
+<button form="empty" type="submit" formmethod="post" formaction="/get_statistics"> Get statistics </button>
+</body>
+<ol>
+    <li>
+        <font size="+1"> Action 1 </font>
+        <br>
+        <font> Very long and informative description </font>
+        <br>
+        <font> Start date: 22.08.2000 15:24:00, End date: 22.08.2000 15:55:45 </font>
+        <br>
+        <font> Mark=4 </font>
+        <br>
+        <button form="empty" type="submit" formmethod="post" formaction="/delete" name="id" value="1"> Delete </button>
+        <button form="empty" type="submit" formmethod="post" formaction="/edit_request" name="id" value="1"> Edit </button>
+        <button form="empty" type="submit" formmethod="post" formaction="/subaction/add" name="id" value="1"> Add subaction </button>
+            <ol>
+
+                <li>
+                <font> I went to drink some tea</font>
+                    <br>
+                    <font size="-1"> Start date: 22.08.2000 15:30:00, End date: 22.08.2000 15:35:35 </font>
+                    <br>
+                </li>
+
+                <li>
+                <font> I ate piece of cake</font>
+                    <br>
+                    <font size="-1"> Start date: 22.08.2000 15:30:00, End date: 22.08.2000 15:35:35 </font>
+                </li>
+
+                <li>
+                <font> I peed</font>
+                    <br>
+                    <font size="-1"> Start date: 22.08.2000 15:35:35, End date: 22.08.2000 15:40:00 </font>
+                </li>
+            </ol>
+    </li>
+</ol>
+</body>
+</html>

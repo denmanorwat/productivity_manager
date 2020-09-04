@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/get_statistics" method="POST" accept-charset="UTF-8">
+  <font> From which date statistics required:</font>
+  <br>
+  <input type="date" id="start_date" name="start_date" value="" required><font>   </font>
+  <input type="time" id="start_time" name="start_time" value="" required>
+  <br>
+  <font> To which date statistics required:</font>
+  <br>
+  <input type="date" id="end_date" name="end_date" value="" required><font>  </font>
+  <input type="time" id="end_time" name="end_time" value="" required>
+  <br>
+  <br>
+  <input type="submit" id="add" formaction="/get_statistics" value="Get statistics" name="action">
+  <input type="submit" id="cancel" formaction="/" value="Cancel" name="action" formnovalidate>
+</form>
+</body>
+</html>
