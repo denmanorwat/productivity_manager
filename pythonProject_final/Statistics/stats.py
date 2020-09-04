@@ -39,6 +39,7 @@ class Statistics:
             if len(action._subactions) != 0:
                 subaction_time = Statistics.time_from_subactions(action._subactions)
                 print("Subaction time:" + str(subaction_time))
+                print("Quantity of subactions:" + str(len(action._subactions)))
                 self.time_spent_on_actions.update(
                     {action: (action_time-subaction_time,
                           round((action_time-subaction_time)/action_time*100), 2)})
@@ -113,7 +114,7 @@ class Statistics:
                         for k in range(j, len(starting_points)):
                             if new_end < starting_points[k]:
                                 new_start = starting_points[j]
-                                for l in range(j, k+1):
+                                for l in range(j, k):
                                     starting_points.pop(j)
                                     ending_points.pop(j)
                                 starting_points.append(new_start)
@@ -139,6 +140,8 @@ class Statistics:
                             ending_points.append(new_end)
 
                 if new_end < starting_points[len(ending_points) - 1]:
+                    print("ERROR1 start:" + new_start)
+                    print("ERROR1 end:" + new_end)
                     starting_points.append(new_start)
                     ending_points.append(new_end)
                 else:
@@ -154,6 +157,9 @@ class Statistics:
             starting_points.sort()
             ending_points.sort()
         time = 0
+        print("_________SUMMARY___________")
+        print(starting_points)
+        print(ending_points)
         for i in range(0, len(starting_points)):
             time += Statistics.time_from_dates(starting_points[i], ending_points[i])
         return time
